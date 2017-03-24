@@ -1010,6 +1010,7 @@ fileprivate func handleconfig() throws -> [String:Any]  {
     }
     
     // open local config file in /public
+    /**
     #if os(OSX)
         let configurl = URL(fileURLWithPath:"/Users/williamdonner/igblu/public/config.json")
     #elseif os(Linux)
@@ -1021,6 +1022,7 @@ fileprivate func handleconfig() throws -> [String:Any]  {
     if let config = try JSONSerialization.jsonObject(with:data, options: .allowFragments) as? [String: Any] {
         return  config
     } else {
+ */
         return fallback()
-    }
+   // }
 }
